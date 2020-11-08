@@ -1,0 +1,21 @@
+.register__form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 483px;
+}
+
+.register__info {
+  padding-top: 100px;
+  background: url('../img/icons/attention.jpg') 50% 0% no-repeat;
+}
+
+.register__info h2 {
+  font-size: 20px;
+}
+
+.register__info p {
+  font-size: 14px;
+  color: #979797;
+}
