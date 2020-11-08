@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 export default () => {
   const handleClick = (e)=>{
@@ -23,7 +24,7 @@ export default () => {
 
         <div className="auth__controls">
           <button tabIndex="0" onClick={handleClick} className="auth__login" type="submit">Войти в аккаунт</button>
-          <div tabIndex="0" className="auth__signin">Зарегистрироваться</div>
+          <Link to="/register" tabIndex="0" className="auth__signin">Зарегистрироваться</Link>
         </div>
       </form>
     </div>
