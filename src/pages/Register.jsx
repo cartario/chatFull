@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Field from '../components/Field';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
@@ -22,6 +21,7 @@ export default () => {
   });
 
   const onSubmit = () => {
+    console.log('sub')
     setSuccess(true);
     const data = watch();
     console.log(data);

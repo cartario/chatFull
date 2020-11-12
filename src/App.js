@@ -1,8 +1,10 @@
 import Auth from './pages/Auth';
 import Register from './pages/Register';
-import {Route, Link} from 'react-router-dom';
+import Home from './pages/Home';
+import {Route, Link, Redirect} from 'react-router-dom';
 
 function App() {
+  const isAuth = true;
   return (
     <div className="App">
       <Route path="/" exact>
@@ -10,6 +12,7 @@ function App() {
       </Route>
       <Route path="/auth" component={Auth} exact/>
       <Route path="/register" component={Register} exact/>
+      {isAuth ? <Route path="/home" component={Home} exact/> : <Redirect to="/" />}
     </div>
   );
 }
