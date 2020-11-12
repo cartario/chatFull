@@ -1,5 +1,5 @@
-import Auth from './components/Auth';
-import Register from './components/Register';
+import Auth from './pages/Auth';
+import Register from './pages/Register';
 import {Route, Link} from 'react-router-dom';
 
 function App() {

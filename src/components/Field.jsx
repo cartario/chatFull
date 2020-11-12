@@ -16,7 +16,7 @@ export default ({obj}) => {
 
   return (
     <div className={`auth__field ${getValid(valid)}`}>
-      <input name={name} type={type} placeholder={placeholder} />
+      <input name={name} type={type} placeholder={placeholder}/>
       <span className="auth__error">Введите корректный {placeholder.split(' ')[1]}</span>
     </div>
   )
