@@ -1,17 +1,21 @@
 import React from 'react';
 import editIcon from '../img/icons/edit.png';
 import deleteIcon from '../img/icons/delete.png';
+import classnames from 'classnames';
 
-export default ({ isMe, avatarUrl, date, name, text }) => {
+export default ({ isMe=false, avatarUrl, date, name, text, isReaded=false }) => {
   return ( 
-    <div className="message__wrapper"> 
+    
     <div className="message">
       <div className="message__avatar">
         <img src={avatarUrl} alt="avatar" />
       </div>
       <div className="message__content">
         <h4>{name}</h4>
-        <div className="message__payload .message__payload--done">
+        <div className={classnames({
+          message__payload: true,
+          "message__payload--readed": isReaded
+        })}>
           <p>{text}</p>
           <time>{date}</time>
         </div>
@@ -23,6 +27,6 @@ export default ({ isMe, avatarUrl, date, name, text }) => {
         </div>
       )}
     </div>  
-    </div>    
+       
   );
 };

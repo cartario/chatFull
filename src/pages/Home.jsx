@@ -11,10 +11,11 @@ export default () => {
 
   return (
     <div>
-      <div>
-        <Message isMe={false} avatarUrl={avatarUrl} date={date} name={name} text={text} />
+      <div className="message__wrapper">
+        <Message 
+        isMe={false} avatarUrl={avatarUrl} date={date} name={name} text={text} isReaded={true}/>
       </div>
-      
+
       <div>
       <Message
         isMe={true}
@@ -22,6 +23,7 @@ export default () => {
         date={date}
         name={name}
         text={'dbndndddndndnn hjhjh jhjhjhjh hjhjhjhj hjhjhjh jhjhjkjkjkjkjkjkd ndndn'}
+        isReaded={false}
       />
       </div>
     </div>
