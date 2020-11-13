@@ -3,7 +3,7 @@ import editIcon from '../img/icons/edit.png';
 import deleteIcon from '../img/icons/delete.png';
 import classnames from 'classnames';
 
-export default ({ isMe=false, avatarUrl, date, name, text, isReaded=false }) => {
+export default ({ isMe=false, avatarUrl, date, name, text, isReaded=false , attachments}) => {
   return ( 
     
     <div className="message">
@@ -16,9 +16,22 @@ export default ({ isMe=false, avatarUrl, date, name, text, isReaded=false }) => 
           message__payload: true,
           "message__payload--readed": isReaded
         })}>
-          <p>{text}</p>
+          <div>{text}
+          <div className="message__attachments">
+        
+        {
+          attachments&&attachments.map((img, i)=> <div className="message__img" key={i}><img 
+          src={img.url}
+          alt="atachmentsImg" width="40" height="40"
+          
+          /></div>)
+        }
+      </div>
+          </div>
           <time>{date}</time>
+          
         </div>
+       
       </div>
       {isMe && (
         <div className="message__control">
@@ -26,6 +39,7 @@ export default ({ isMe=false, avatarUrl, date, name, text, isReaded=false }) => 
           <img src={deleteIcon} width="17" height="22" alt="deleteIcon" />
         </div>
       )}
+      
     </div>  
        
   );

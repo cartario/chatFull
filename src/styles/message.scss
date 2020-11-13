@@ -2,14 +2,15 @@
   display: inline-block;
 }
 
-.message {  
+.message { 
+  position: relative; 
   display: flex;
-  max-width: 400px;  
+  max-width: 400px;
+  margin-bottom: 55px;  
   padding: 3px 10px 6px 10px;
   margin-left: 40px;
   border-radius: 10px;
-  background: $messageColor;
-  
+  background: $messageColor;  
 }
 
 .message__avatar {
@@ -39,18 +40,14 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  p {
-    margin: 0;  
-    margin-right: 10px;  
+  div:first-child {
+   
     font-size: 16px;
     color: white;
   }
   time {
     position: relative;
-    color: white;
-
-    
-    
+    color: white;    
     &::after {
       content: "";
       position: absolute;
@@ -75,13 +72,31 @@
   }
 }
 
-
-
 .message__control {
   display: flex;
   justify-content: space-between;
   align-self: flex-end;
   width: 80px;
   height: 100%;
-  margin-left: 10px;  
+  margin-left: 10px; 
+  cursor: pointer; 
+}
+
+.message__attachments { 
+  img {    
+    max-width: 100%;
+    height: auto;
+    margin-top: -50%;
+  }
+}
+
+.message__img {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 5px;
+  padding: 0;
+  overflow: hidden;
+  border-radius: 5px;
+  cursor: pointer;  
 }
